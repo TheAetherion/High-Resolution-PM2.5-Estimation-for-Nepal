@@ -23,7 +23,7 @@ import time
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 # Folder containing your era5_YYYYMMDD.nc files
-ERA5_DIR = r"C:\Users\samue\Documents\Conferences\Space\PM2.5\ERA5_Data"
+ERA5_DIR = r"Your_Path"
 
 # Where to write converted files.
 # Set to ERA5_DIR to overwrite in-place (originals are backed up first).

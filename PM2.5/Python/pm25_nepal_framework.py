@@ -11,7 +11,7 @@ Inputs   : MAIAC AOD (HDF), ERA5 Meteo (NetCDF), NDVI (HDF), DEM (TIF),
 Output   : Daily 1-km PM2.5 GeoTIFF(s) + validation metrics + diagnostic plots
            + distance-to-station map + confidence flags + applicability statement
 =============================================================================
-
+"""
 
 # ──────────────────────────────────────────────────────────────────────────────
 # 0. IMPORTS & GLOBAL CONFIGURATION
@@ -78,7 +78,7 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 # ── Project root ──────────────────────────────────────────────────────────────
-PROJECT_ROOT = Path(r"C:\Users\samue\Documents\Conferences\Space\PM2.5")
+PROJECT_ROOT = Path(r"Your_Path")
 
 # ── Data paths ────────────────────────────────────────────────────────────────
 AOD_GLOB_2025 = str(PROJECT_ROOT / "AOD_Data" / "**" / "MCD19A2.A2025*.hdf")

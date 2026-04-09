@@ -1,9 +1,8 @@
-# era5_daily.py
 import cdsapi
 from pathlib import Path
 from datetime import datetime, timedelta
 
-SAVE_DIR = Path(r"C:\Users\samue\Documents\Conferences\Space\PM2.5\ERA5_Data")
+SAVE_DIR = Path(r"Your_Path")
 START    = datetime(2025, 1, 1)
 END      = datetime(2026, 3, 31)
 BBOX     = [30.5, 79.5, 26.0, 88.3]   # N, W, S, E — Nepal + buffer

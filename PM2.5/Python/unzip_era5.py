@@ -18,7 +18,7 @@ import tempfile
 import time
 import zipfile
 
-ERA5_DIR    = r"C:\Users\samue\Documents\Conferences\Space\PM2.5\ERA5_Data"
+ERA5_DIR    = r"Your_Path"
 KEEP_BACKUP = True   # saves .zip_orig backup of each original
 
 logging.basicConfig(

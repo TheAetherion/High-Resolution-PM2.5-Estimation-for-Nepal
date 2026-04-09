@@ -5,8 +5,8 @@ import time
 from datetime import datetime
 
 # --- CONFIGURATION (Based on your provided files) ---
-API_KEY = "06b5ee9ced08ddf589a5c1537da971ecddecf9a9cbdb043a4c52abafb18eafa6"
-SAVE_PATH = r"C:\Users\samue\Documents\Conferences\Space\PM2.5\PM2.5_Data"
+API_KEY = "Your_API_Key"
+SAVE_PATH = r"Your_Path"
 HEADERS = {"X-API-Key": API_KEY}
 BASE = "https://api.openaq.org/v3"
 PM25_PARAM_ID = 2

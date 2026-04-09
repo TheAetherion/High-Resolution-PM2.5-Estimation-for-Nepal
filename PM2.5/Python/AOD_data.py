@@ -11,9 +11,9 @@ from urllib3.util.retry import Retry
 # Your Earthdata Login credentials (https://urs.earthdata.nasa.gov)
 # The Bearer token is used only for the JSON directory listing.
 # The actual HDF file downloads require Basic auth (username + password).
-USERNAME = "samuel.gautam"        # <-- your Earthdata username
-PASSWORD = "@Samuel.gautam12"   # <-- your Earthdata password
-TOKEN    = "eyJ0eXAiOiJKV1QiLCJvcmlnaW4iOiJFYXJ0aGRhdGEgTG9naW4iLCJzaWciOiJlZGxqd3RwdWJrZXlfb3BzIiwiYWxnIjoiUlMyNTYifQ.eyJ0eXBlIjoiVXNlciIsInVpZCI6InNhbXVlbC5nYXV0YW0iLCJleHAiOjE3ODA4Mzc2MDEsImlhdCI6MTc3NTY1MzYwMSwiaXNzIjoiaHR0cHM6Ly91cnMuZWFydGhkYXRhLm5hc2EuZ292IiwiaWRlbnRpdHlfcHJvdmlkZXIiOiJlZGxfb3BzIiwiYWNyIjoiZWRsIiwiYXNzdXJhbmNlX2xldmVsIjozfQ.sxlM38Y2LOAC2PtS9lUu5JeKW64K-qD9vi1fOWgCNqGQcxwHGXJoW-OMjLKt0BdtOpj1rJLQq8vnCRaag1fp0iidwsL2K6SKG9Q4t2TUKFY1v1GuOCBMts3ziEs-lt03N393yrJlniU8h1J5UvFjCpMEG-LgOaXSfBKtcfEDkSymn8fhzXCWWB3LD8fIF4u5QHO7Z9yvBQ1kVal85MVjuCB-5pvRow3SAdF_SS1XVTTgRWhNF4OpwI0PK4awQFuZiZ4utfkYiX3exdMdq1GPI7C39MYEarJI977dgZpjLvEWQBPHI6HOMnbHjYr2JJRo_tptR18FeFkY0Bo_BQLMHQ"  # <-- paste fresh token from urs.earthdata.nasa.gov
+USERNAME = "Your_Username"        # <-- your Earthdata username
+PASSWORD = "Your_Password"   # <-- your Earthdata password
+TOKEN    = "Your_Token"  # <-- paste fresh token from urs.earthdata.nasa.gov
 SAVE_DIR = Path(r"C:\Users\samue\Documents\Conferences\Space\PM2.5\AOD_Data")
 TILES = ["h25v05", "h25v06", "h26v06"]
 
