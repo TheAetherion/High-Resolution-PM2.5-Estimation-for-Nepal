@@ -222,8 +222,8 @@ All input data are freely available from public sources.
 ### Using Conda (recommended)
 
 ```bash
-git clone https://github.com/TheAetherion/High-Resolution-PM2.5-Estimation-for-Nepal-.git
-cd High-Resolution-PM2.5-Estimation-for-Nepal-
+git clone https://github.com/TheAetherion/High-Resolution-PM2.5-Estimation-for-Nepal.git
+cd High-Resolution-PM2.5-Estimation-for-Nepal
 conda env create -f environment.yml
 conda activate nepal-pm25
 ```
@@ -231,8 +231,8 @@ conda activate nepal-pm25
 ### Using pip
 
 ```bash
-git clone https://github.com/TheAetherion/High-Resolution-PM2.5-Estimation-for-Nepal-.git
-cd High-Resolution-PM2.5-Estimation-for-Nepal-
+git clone https://github.com/TheAetherion/High-Resolution-PM2.5-Estimation-for-Nepal.git
+cd High-Resolution-PM2.5-Estimation-for-Nepal
 pip install -r requirements.txt
 ```
 
