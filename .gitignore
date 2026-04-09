@@ -3,6 +3,7 @@ PM2.5/ERA5_Data/
 PM2.5/Vegetation_Data/
 PM2.5/Population__Data/
 PM2.5/DEM_Data/
+project report.pdf
 *.hdf
 *.nc
 *.nc.zip_orig
