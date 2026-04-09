@@ -1,0 +1,62 @@
+
+================================================================================
+  PM2.5 ESTIMATION FRAMEWORK — APPLICABILITY STATEMENT
+  Nepal v10 | Generated: 2026-04-09 06:08:38
+================================================================================
+
+WHERE THE MODEL CAN BE APPLIED RELIABLY
+──────────────────────────────────────────────────────────────────────────────
+• Urban and semi-urban areas of Nepal — specifically Kathmandu Valley,
+  the Terai lowland cities (Birgunj, Hetauda, Dhangadhi), and periurban
+  settlements with land use and pollution sources comparable to the training
+  ground stations.
+• Pixels within 50 km of a training station (HIGH or MEDIUM
+  confidence zones), where the model has demonstrated cross-validated
+  prediction skill (CV R² target ≥ 0.80).
+• Elevations below approximately 2500 m a.s.l., where AOD–PM2.5 conversion
+  factors and meteorological drivers are similar to training conditions.
+• Temporal periods overlapping with the MAIAC AOD tile archive
+  (2025-01-01 – 2026-03-31) and with similar land cover and seasonal patterns.
+
+WHERE THE MODEL SHOULD NOT BE APPLIED (or used with LOW confidence only)
+──────────────────────────────────────────────────────────────────────────────
+• High Himalayan regions above 4000 m a.s.l., where aerosol chemistry,
+  mixing height, and precipitation patterns differ fundamentally from the
+  training domain and no ground stations exist.
+• Remote areas more than 50 km from any training station
+  (confidence flag = 0 / LOW), where spatial extrapolation is unconstrained
+  and prediction uncertainty is high.
+• Regions outside Nepal — the model was trained exclusively on Nepali
+  ground-station data and cannot generalise to India, China, or Bhutan
+  without retraining with local observations.
+• Areas with fundamentally different pollution source profiles (e.g. heavy
+  industrial zones, brick kilns, mining regions) not represented in the
+  training station network.
+
+CONFIDENCE FLAG DEFINITIONS
+──────────────────────────────────────────────────────────────────────────────
+  Flag 2 (HIGH)   — pixel within 20 km of a training station.
+                    Model accuracy is highest; spatial extrapolation minimal.
+  Flag 1 (MEDIUM) — pixel between 20 km and 50 km of a station.
+                    Model still applies; some spatial extrapolation involved.
+  Flag 0 (LOW)    — pixel farther than 50 km from all stations.
+                    Predictions are outside the applicability domain;
+                    use only with caution and quantified uncertainty.
+
+APPLICABILITY RADIUS
+──────────────────────────────────────────────────────────────────────────────
+  Default radius: 50 km  (user-settable via radius_km parameter in run_pipeline).
+  Based on the spatial autocorrelation length of PM2.5 in Nepal (roughly
+  50–80 km for the Terai plain; shorter in the valley micro-topography).
+
+OUTPUT FILES
+──────────────────────────────────────────────────────────────────────────────
+  dist_to_station_km.tif  — Distance (km) from each 1-km pixel to the nearest
+                             training station.
+  confidence_flag.tif     — Confidence flag (0/1/2) as defined above.
+  pm25_nepal_1km_whole_country.tif      — Single-model PM2.5 prediction.
+  pm25_nepal_1km_region_specific.tif   — Region-specific model prediction
+                                          (KTM Valley / Outer Cities).
+  pm25_nepal_1km_distance_ensemble.tif — IDW ensemble of regional models.
+
+================================================================================
