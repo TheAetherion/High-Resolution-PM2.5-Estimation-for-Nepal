@@ -6,7 +6,7 @@
 [![Data: Zenodo](https://img.shields.io/badge/Data-Zenodo-blue.svg)](https://zenodo.org)
 [![Paper: In Review](https://img.shields.io/badge/Paper-In%20Review-orange.svg)]()
 
-> **Samarpan Mani Gautam, Udhyan Shah, Suresh Acharaya, Dilip Rajak, Jigyashu Ghimire, Liza Dev Pradhan Shrestha**  
+> **Samarpan Mani Gautam, Udhyan Shah, Suresh Acharaya, Dilip Rajak, Jigyasu Ghimire, Liza Dev Pradhan Shrestha**  
 > Kathmandu University, Nepal  
 > Manuscript under review — *Atmospheric Pollution Research / Air Quality, Atmosphere & Health*
 
