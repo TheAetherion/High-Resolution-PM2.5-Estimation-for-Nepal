@@ -40,7 +40,6 @@ The framework does two things that most similar studies do not:
 ```
 High-Resolution-PM2.5-Estimation-for-Nepal/
 │
-├── project report.pdf              # Final project report
 ├── README.md
 │
 ├── AEROSOL_Index/
@@ -87,84 +86,69 @@ High-Resolution-PM2.5-Estimation-for-Nepal/
 │   └── npl_adminlines.*            # Administrative boundary lines
 │   (each layer has .cpg, .dbf, .prj, .shp, .shx; *_em variants included)
 │
-├── PM2.5/
-│   ├── AOD_Data/                   # MODIS MAIAC MCD19A2 HDF tiles
-│   │   ├── 2025-01-01/             # Daily subfolders (Jan 2025 – Mar 2026)
-│   │   │   ├── MCD19A2.A2025001.h25v05.061.*.hdf
-│   │   │   ├── MCD19A2.A2025001.h25v06.061.*.hdf
-│   │   │   └── MCD19A2.A2025001.h26v06.061.*.hdf
-│   │   └── ...                     # One subfolder per day
-│   │
-│   ├── ERA5_Data/                  # ERA5 reanalysis daily NetCDF files
-│   │   ├── era5_20250101.nc
-│   │   ├── era5_20250101.nc.zip_orig
-│   │   ├── ...                     # One .nc + .zip_orig per day
-│   │   └── unzip_log.txt
-│   │
-│   ├── Outputs/                    # Model outputs and diagnostics
-│   │   ├── aod_gap_filled_1km.tif              # Gap-filled AOD raster
-│   │   ├── aod_gap_filler.joblib               # Trained RF gap-filler model
-│   │   ├── applicability_statement.txt
-│   │   ├── confidence_flag.tif                 # Confidence-flag raster (0/1/2)
-│   │   ├── dist_to_station_km.tif              # Distance-to-nearest-station raster
-│   │   ├── pm25_nepal_1km_distance_ensemble.tif  # Final PM₂.₅ raster (ensemble)
-│   │   ├── pm25_nepal_1km_whole_country.tif      # Full-country PM₂.₅ raster
-│   │   ├── pm25_model_final.joblib             # Final HistGBR model
-│   │   ├── pm25_model_region_ktm_valley.joblib
-│   │   ├── pm25_model_region_outer_cities.joblib
-│   │   ├── pm25_calibrator_final.joblib        # Isotonic calibrators
-│   │   ├── pm25_calibrator_region_ktm_valley.joblib
-│   │   ├── pm25_calibrator_region_outer_cities.joblib
-│   │   ├── pm25_scaler_final.joblib            # Feature scalers
-│   │   ├── pm25_scaler_region_ktm_valley.joblib
-│   │   ├── pm25_scaler_region_outer_cities.joblib
-│   │   ├── diag_A_aod_vs_pm25_distance_ensemble.png
-│   │   ├── diag_B_cv_scatter_distance_ensemble.png
-│   │   ├── diag_C_fold_r2_distance_ensemble.png
-│   │   ├── diag_D_timeseries_distance_ensemble.png
-│   │   ├── error_vs_distance_v10_distance_ensemble.png
-│   │   ├── pm25_diagnostics_v10_distance_ensemble.png
-│   │   └── _tmp_ndvi_*.tif                     # Temporary NDVI intermediates
-│   │
-│   ├── PM2.5_Data/                 # Ground-truth sensor CSVs (OpenAQ / GD Labs)
-│   │   ├── Nepal_Balaju_(SC-26)-_GD_Labs_*.csv
-│   │   ├── Nepal_Balkumari(SC-28)-_GD_Labs_*.csv
-│   │   ├── ...                     # One CSV per sensor station
-│   │   └── Nepal_Tyanglaphat_(SC_-_21)-_GD_Labs_*.csv
-│   │
-│   ├── Population__Data/
-│   │   └── npl_pd_2020_1km_UNadj.tif           # WorldPop 2020 population density
-│   │
-│   ├── Python/                     # All modelling scripts
-│   │   ├── AOD_data.py             # MODIS AOD download / preprocessing
-│   │   ├── conversion.py           # Unit / projection conversions
-│   │   ├── era5_daily.py           # ERA5 download and daily aggregation
-│   │   ├── ground_data.py          # Ground sensor ingestion and QC
-│   │   ├── unzip_era5.py           # ERA5 archive extraction
-│   │   ├── pm25_nepal_framework.py         # Main framework 
-│   │
-│   └── Vegetation_Data/            # MODIS NDVI monthly composites
-│       ├── MOD13A3.A2025001.h25v05.061.*.hdf
-│       ├── MOD13A3.A2025001.h25v06.061.*.hdf
-│       ├── MOD13A3.A2025032.h25v05.061.*.hdf
-│       └── MOD13A3.A2025032.h25v06.061.*.hdf
-│
-└── Report/
-    ├── nepal_pm25_paper.tex        # LaTeX manuscript source
-    ├── nepal_pm25_paper.pdf        # Compiled manuscript
-    ├── nepal_pm25_refs.bib         # Bibliography
-    ├── nepal_pm25_paper.*          # LaTeX auxiliary files (.aux, .bbl, .blg, etc.)
-    ├── AEROSOL_Index_Plot.png      # Figures used in manuscript
-    ├── CO_Plot.png
-    ├── HCHO_Plot.png
-    ├── NO2_Plot.png
-    ├── O3_Plot.png
-    ├── SO2_Plot.png
-    ├── diag_A_aod_vs_pm25_distance_ensemble.png
-    ├── diag_B_cv_scatter_distance_ensemble.png
-    ├── diag_C_fold_r2_distance_ensemble.png
-    ├── diag_D_timeseries_distance_ensemble.png
-    └── Papers/                     # Reference literature PDFs
+└── PM2.5/
+    ├── AOD_Data/                   # MODIS MAIAC MCD19A2 HDF tiles
+    │   ├── 2025-01-01/             # Daily subfolders (Jan 2025 – Mar 2026)
+    │   │   ├── MCD19A2.A2025001.h25v05.061.*.hdf
+    │   │   ├── MCD19A2.A2025001.h25v06.061.*.hdf
+    │   │   └── MCD19A2.A2025001.h26v06.061.*.hdf
+    │   └── ...                     # One subfolder per day
+    │
+    ├── ERA5_Data/                  # ERA5 reanalysis daily NetCDF files
+    │   ├── era5_20250101.nc
+    │   ├── era5_20250101.nc.zip_orig
+    │   ├── ...                     # One .nc + .zip_orig per day
+    │   └── unzip_log.txt
+    │
+    ├── Outputs/                    # Model outputs and diagnostics
+    │   ├── aod_gap_filled_1km.tif              # Gap-filled AOD raster
+    │   ├── aod_gap_filler.joblib               # Trained RF gap-filler model
+    │   ├── applicability_statement.txt
+    │   ├── confidence_flag.tif                 # Confidence-flag raster (0/1/2)
+    │   ├── dist_to_station_km.tif              # Distance-to-nearest-station raster
+    │   ├── pm25_nepal_1km_distance_ensemble.tif  # Final PM₂.₅ raster (ensemble)
+    │   ├── pm25_nepal_1km_whole_country.tif      # Full-country PM₂.₅ raster
+    │   ├── pm25_model_final.joblib             # Final HistGBR model
+    │   ├── pm25_model_region_ktm_valley.joblib
+    │   ├── pm25_model_region_outer_cities.joblib
+    │   ├── pm25_calibrator_final.joblib        # Isotonic calibrators
+    │   ├── pm25_calibrator_region_ktm_valley.joblib
+    │   ├── pm25_calibrator_region_outer_cities.joblib
+    │   ├── pm25_scaler_final.joblib            # Feature scalers
+    │   ├── pm25_scaler_region_ktm_valley.joblib
+    │   ├── pm25_scaler_region_outer_cities.joblib
+    │   ├── diag_A_aod_vs_pm25_distance_ensemble.png
+    │   ├── diag_B_cv_scatter_distance_ensemble.png
+    │   ├── diag_C_fold_r2_distance_ensemble.png
+    │   ├── diag_D_timeseries_distance_ensemble.png
+    │   ├── error_vs_distance_v10_distance_ensemble.png
+    │   ├── pm25_diagnostics_v10_distance_ensemble.png
+    │   └── _tmp_ndvi_*.tif                     # Temporary NDVI intermediates
+    │
+    ├── PM2.5_Data/                 # Ground-truth sensor CSVs (OpenAQ / GD Labs)
+    │   ├── Nepal_Balaju_(SC-26)-_GD_Labs_*.csv
+    │   ├── Nepal_Balkumari(SC-28)-_GD_Labs_*.csv
+    │   ├── ...                     # One CSV per sensor station
+    │   └── Nepal_Tyanglaphat_(SC_-_21)-_GD_Labs_*.csv
+    │
+    ├── Population__Data/
+    │   └── npl_pd_2020_1km_UNadj.tif           # WorldPop 2020 population density
+    │
+    ├── Python/                     # All modelling scripts
+    │   ├── AOD_data.py             # MODIS AOD download / preprocessing
+    │   ├── conversion.py           # Unit / projection conversions
+    │   ├── era5_daily.py           # ERA5 download and daily aggregation
+    │   ├── ground_data.py          # Ground sensor ingestion and QC
+    │   ├── unzip_era5.py           # ERA5 archive extraction
+    │    ├── pm25_nepal_framework.py         # Main framework 
+    │
+    └── Vegetation_Data/            # MODIS NDVI monthly composites
+       ├── MOD13A3.A2025001.h25v05.061.*.hdf
+       ├── MOD13A3.A2025001.h25v06.061.*.hdf
+       ├── MOD13A3.A2025032.h25v05.061.*.hdf
+       └── MOD13A3.A2025032.h25v06.061.*.hdf
+
+
 ```
 
 ---
