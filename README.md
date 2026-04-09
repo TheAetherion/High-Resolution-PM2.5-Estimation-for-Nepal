@@ -138,16 +138,10 @@ High-Resolution-PM2.5-Estimation-for-Nepal/
 │   ├── Python/                     # All modelling scripts
 │   │   ├── AOD_data.py             # MODIS AOD download / preprocessing
 │   │   ├── conversion.py           # Unit / projection conversions
-│   │   ├── diagnose.py             # Model diagnostics
-│   │   ├── diagnose_era5.py        # ERA5-specific diagnostics
 │   │   ├── era5_daily.py           # ERA5 download and daily aggregation
 │   │   ├── ground_data.py          # Ground sensor ingestion and QC
 │   │   ├── unzip_era5.py           # ERA5 archive extraction
-│   │   ├── pm25_nepal_framework.py         # Main framework (latest)
-│   │   ├── pm25_nepal_framework_v1.py      # Version history
-│   │   ├── pm25_nepal_framework_v2.py
-│   │   ├── ...
-│   │   └── pm25_nepal_framework_v11.py
+│   │   ├── pm25_nepal_framework.py         # Main framework 
 │   │
 │   └── Vegetation_Data/            # MODIS NDVI monthly composites
 │       ├── MOD13A3.A2025001.h25v05.061.*.hdf
