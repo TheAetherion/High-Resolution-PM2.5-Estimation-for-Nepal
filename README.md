@@ -299,7 +299,7 @@ If you use this code or the prediction outputs in your work, please cite:
              Monitoring Gaps and the Urgent Need for Regulatory Reform},
   journal = {Atmospheric Pollution Research},
   year    = {2025},
-  note    = {Under review}
+  note    = {Submitted to Journal}
 }
 ```
 
